@@ -40,11 +40,7 @@ while True:
     for cnt in countors:
       if cv.contourArea(cnt) >2:
         x1,y1,w,h=cv.boundingRect(cnt)
-        cv.rectangle(frame,(x1,y1),(x1+w,y1+h),(0,255,0),1)
-   
-    # if bbox is not None:
-    #     x1,y1,x2,y2=bbox
-    #     cv.rectangle(frame,(x1,y1),(x2,y2),(0,255,0),2)   
+        cv.rectangle(frame,(x1,y1),(x1+w,y1+h),(0,255,0),1)   
      
     cv.imshow('frame',frame)
     if cv.waitKey(1) & 0xFF==ord('q'):
